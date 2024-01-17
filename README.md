@@ -1,4 +1,4 @@
-# Context-Aware-Healthcare
+# Multi-Channel Hypergraph-Aware-Healthcare
 
 Codes for  paper: Multi-Channel Hypergraph Network for Sequential Diagnosis Prediction in Healthcare
 
