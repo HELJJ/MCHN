@@ -1,38 +1,9 @@
-# Multi-Channel Hypergraph-Aware-Healthcare
+# Multi-Channel Hypergraph Network for Sequential Diagnosis Prediction in Healthcare
 
-Codes for  paper: Multi-Channel Hypergraph Network for Sequential Diagnosis Prediction in Healthcare
+This is the code repository for the paper "Multi-Channel Hypergraph Network for Sequential Diagnosis Prediction in Healthcare". 
 
-## Download the MIMIC-III and MIMIC-IV datasets
-Go to [https://mimic.physionet.org/](https://mimic.physionet.org/gettingstarted/access/) for access. Once you have the authority for the dataset, download the dataset and extract the csv files to `data/mimic3/raw/` and `data/mimic4/raw/` in this project.
+## Requirements
 
-## Preprocess
-
-For the MIMIC-III dataset: 
-
-```bash
-python run_preprocess_mimic-iii.py
-```
-
-For the MIMIC-IV dataset: 
-
-```
-python run_preprocess_mimic-iv.py
-```
-
-## Train model
-
-```bash
-python train_hyper.py
-```
-
-## Configuration
-Please see `train_hyper.py` for detailed configurations.
-
-## Enviroment
-
-Here we list our runing environment.
-
-```
 python==3.6.13
 torch==1.10.1
 tqdm==4.62.3
@@ -42,9 +13,16 @@ numpy==1.24.3
 torch-geometric==2.2.0
 torch-scatter==2.0.9
 torch-sparse==0.6.12
-```
 
-You can also use requirements.txt to install the environment using the command pip install requirements.txt -i https://pypi.mirrors.ustc.edu.cn/simple
+## 1. Prepare the datasets
+
+### (1) Download the MIMIC-III and MIMIC-IV datasets
+
+The original datasets can be downloaded from the following URLs.
+
+Go to [https://mimic.physionet.org/](https://mimic.physionet.org/gettingstarted/access/) for access. Once you have the authority for the dataset, download the dataset and extract the csv files to `data/mimic3/raw/` and `data/mimic4/raw/` in this project.
+
+After the datasets are downloaded, please put each of them into a specified directory of the project.
 
 ## Folder Specification
 
@@ -73,8 +51,50 @@ You can also use requirements.txt to install the environment using the command p
     - diagnoses_ics.csv
     - prescriptions.csv
 
-## How to run
+
+
+### (2) Preprocess datasets 
+
+````python
+For the MIMIC-III dataset: 
+
+```bash
+python run_preprocess_mimic-iii.py
+```
+
+For the MIMIC-IV dataset: 
 
 ```
+python run_preprocess_mimic-iv.py
+```
+````
+
+## 2. Configuration
+
+Please see `train_hyper.py` for detailed configurations.
+
+
+
+## 3. Train model
+
+You can train the model with the following command:
+
+````python
+```bash
 python train_hyper.py
+```
+````
+
+
+
+## Acknowledgement
+
+If this work is useful in your research, please cite our paper.
+
+```python
+@inproceedings{zhang2024fusion, 
+  title={Fusion of Dynamic Hypergraph and Clinical Event for Sequential Diagnosis Prediction},
+  author={Zhang, Xin and Peng, Xueping and Guan, Hongjiao and Zhao, Long and Qiao, Xinxiao and Lu, Wenpeng },
+  booktitle={Proceedings of the 29th IEEE International Conference on Parallel and Distributed Systems (ICPADS)},
+  year={2024}}
 ```
