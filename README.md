@@ -92,9 +92,12 @@ python train_hyper.py
 If this work is useful in your research, please cite our paper.
 
 ```python
-@inproceedings{zhang2024fusion, 
-  title={Fusion of Dynamic Hypergraph and Clinical Event for Sequential Diagnosis Prediction},
-  author={Zhang, Xin and Peng, Xueping and Guan, Hongjiao and Zhao, Long and Qiao, Xinxiao and Lu, Wenpeng },
-  booktitle={Proceedings of the 29th IEEE International Conference on Parallel and Distributed Systems (ICPADS)},
-  year={2024}}
+@inproceedings{zhang2024multi, 
+  title={Multi-Channel Hypergraph Network for Sequential
+Diagnosis Prediction in Healthcare},
+  author={Zhang Xin, Peng Xueping, Guan Hongjiao, Zhao Long, Qiao Xinxiao, Lu Wenpeng},
+  booktitle={Proceedings of the 27th International Conference on Computer Supported Cooperative Work in Design (CSCWD 2024},
+  year={2024}
+ organization={IEEE}
+}
 ```
